@@ -1,5 +1,6 @@
 package sample;
 
+import com.aquafx_project.AquaFx;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -8,8 +9,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 
-public class Controller implements Data{
 
+public class Controller implements Data{
 
     private double[][] resX;
     private double[][] resY;
@@ -148,13 +149,12 @@ public class Controller implements Data{
     public void initialize(){
         initGiven();
         initOur();
-
     }
 
     private void initOur() {
         oX11Min.setText("0");oX11Max.setText("60");
         oX12Min.setText("0");oX12Max.setText("60");
-        oX13Min.setText("0");oX13Max.setText("60");
+//        oX13Min.setText("0");oX13Max.setText("60");
 
         oX21Min.setText("0");oX21Max.setText("30");
         oX22Min.setText("0");oX22Max.setText("6");
@@ -164,7 +164,7 @@ public class Controller implements Data{
 
         oX11MinF.setText("0");oX11MaxF.setText("60");
         oX12MinF.setText("0");oX12MaxF.setText("60");
-        oX13MinF.setText("0");oX13MaxF.setText("60");
+//        oX13MinF.setText("0");oX13MaxF.setText("60");
 
         oX21MinF.setText("0");oX21MaxF.setText("30");
         oX22MinF.setText("0");oX22MaxF.setText("6");
@@ -456,8 +456,8 @@ public class Controller implements Data{
             oX11MaxF.setText("59.03");
             oX12MinF.setText("16.19");
             oX12MaxF.setText("41.24");
-            oX13MinF.setText("21.65");
-            oX13MaxF.setText("47.12");
+//            oX13MinF.setText("21.65");
+//            oX13MaxF.setText("47.12");
             sb.append("\nDone\n\nLimits correction (D+-) for X2 is necessary");
         } else if (iter==1){
             corrX1.setDisable(true);
@@ -470,8 +470,8 @@ public class Controller implements Data{
             oX11MaxF.setText("56.02");
             oX12MinF.setText("18.34");
             oX12MaxF.setText("34.32");
-            oX13MinF.setText("25.41");
-            oX13MaxF.setText("44.28");
+//            oX13MinF.setText("25.41");
+//            oX13MaxF.setText("44.28");
             sb.append("\nDone\n\nLimits correction (D+-) for X2 is necessary");
         } else if (iter==2){
             corrX1.setDisable(true);
@@ -484,8 +484,8 @@ public class Controller implements Data{
             oX11MaxF.setText("55.72");
             oX12MinF.setText("19.78");
             oX12MaxF.setText("30.13");
-            oX13MinF.setText("29.86");
-            oX13MaxF.setText("40.23");
+//            oX13MinF.setText("29.86");
+//            oX13MaxF.setText("40.23");
             sb.append("\nDone\n\n(D+-) enclosed in (D0) - Pareto domain found");
             con.setText(sb.toString());
             con.positionCaret(Integer.MAX_VALUE);
@@ -521,11 +521,11 @@ public class Controller implements Data{
         }
         oX11Min.setText(oX11MinF.getText());
         oX12Min.setText(oX12MinF.getText());
-        oX13Min.setText(oX13MinF.getText());
+//        oX13Min.setText(oX13MinF.getText());
 
         oX11Max.setText(oX11MaxF.getText());
         oX12Max.setText(oX12MaxF.getText());
-        oX13Max.setText(oX13MaxF.getText());
+//        oX13Max.setText(oX13MaxF.getText());
 
     }
     @FXML
